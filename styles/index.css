@@ -1,0 +1,1122 @@
+/* colors used in project 
+fonts : black,white
+border/divider : #03070473,#A4A4A5
+theme : #A122DD #CC397B #FF374F
+box shadow : #00000066*/
+
+:root {
+    --theme-color: #A122DD;
+    --theme-gradient: linear-gradient(90deg, #A122DDFF, #CC397BFF, #FF374FFF);
+    --active-color: #A122DD;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;800&display=swap'); */
+
+/* work-sans-regular - latin */
+@font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/work-sans-v8-latin-regular.woff') format('woff'),
+        url('../fonts/work-sans-v8-latin-regular.ttf') format('truetype');
+}
+
+/* work-sans-600 - latin */
+@font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+        url('../fonts/work-sans-v8-latin-600.woff') format('woff'),
+        url('../fonts/work-sans-v8-latin-600.ttf') format('truetype');
+}
+
+/* work-sans-500 - latin */
+@font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+        url('../fonts/work-sans-v8-latin-500.woff') format('woff'),
+        url('../fonts/work-sans-v8-latin-500.ttf') format('truetype');
+}
+
+/* work-sans-700 - latin */
+@font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('../fonts/work-sans-v8-latin-700.woff') format('woff'),
+        url('../fonts/work-sans-v8-latin-700.ttf') format('truetype');
+}
+
+/* work-sans-800 - latin */
+@font-face {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: local(''),
+        url('../fonts/work-sans-v8-latin-800.woff') format('woff'),
+        url('../fonts/work-sans-v8-latin-800.ttf') format('truetype');
+}
+
+/* custom icon font for gracy project */
+@font-face {
+    font-family: 'Gracycon';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/gracy-icons.woff?19260748') format('woff'),
+        url('../fonts/gracy-icons.ttf?19260748') format('truetype');
+}
+
+/* gi class for gracy font icons */
+.gi {
+    font-family: 'Gracycon';
+    font-style: normal;
+    font-weight: normal;
+    display: inline-block;
+    width: 1em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* gracy font icons */
+.gi-delete:before {
+    content: '\e800';
+}
+
+.gi-add:before {
+    content: '\e801';
+}
+
+.gi-random:before {
+    content: '\e802';
+}
+
+.gi-leftshift:before {
+    content: '\e803';
+}
+
+.gi-share:before {
+    content: '\e804';
+}
+
+.gi-rightshift:before {
+    content: '\e805';
+}
+
+.gi-copy:before {
+    content: '\e806';
+}
+
+.gi-download:before {
+    content: '\e808';
+}
+
+.gi-apply:before {
+    content: '\e80a';
+}
+
+.gi-bottom:before {
+    content: '\e80b';
+}
+
+.gi-bottom-left:before {
+    content: '\e80c';
+}
+
+.gi-bottom-right:before {
+    content: '\e80d';
+}
+
+.gi-circle:before {
+    content: '\e80e';
+}
+
+.gi-left:before {
+    content: '\e80f';
+}
+
+.gi-right:before {
+    content: '\e810';
+}
+
+.gi-top:before {
+    content: '\e811';
+}
+
+.gi-top-left:before {
+    content: '\e812';
+}
+
+.gi-top-right:before {
+    content: '\e813';
+}
+
+.gi-restore:before {
+    content: '\e814';
+}
+
+.gi-save:before {
+    content: '\e815';
+}
+
+.gi-remove:before {
+    content: '\e816';
+}
+
+.gi-code:before {
+    content: '\f121';
+}
+
+button,
+input {
+    user-select: none;
+    border: 2px solid #A4A4A5;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    outline: none;
+}
+
+input[type='number'] {
+    width: 44px;
+    height: 24px;
+    font-size: small;
+}
+
+input[type="number"],
+input[type="text"] {
+    transition: all 160ms ease-in;
+}
+
+/* mozilla input type focus style */
+:focus {
+    outline: none;
+}
+
+::-moz-focus-inner {
+    border: 0;
+}
+
+/* to remove spinners from number type inputs */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden auto;
+    font-family: 'Work Sans', sans-serif;
+}
+
+header {
+    display: block;
+    width: 90vw;
+    margin: 0 auto;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.title {
+    white-space: nowrap;
+    user-select: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2em;
+    background-image: var(--theme-gradient);
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-logo,
+.page-nav {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.page-logo {
+    background: var(--theme-gradient);
+    border: 1px solid var(--theme-color);
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}
+
+.transparent-img-div {
+    background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), linear-gradient(-45deg, #ccc 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #ccc 75%), linear-gradient(-45deg, transparent 75%, #ccc 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    z-index: -1;
+}
+
+/* gradient box */
+.gradient-container {
+    display: block;
+    width: 97vw;
+    margin: 5px auto;
+    border-bottom: 5px solid white;
+    border-radius: 8px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -10vh;
+    z-index: 999;
+}
+
+.gradient {
+    width: 100%;
+    height: 34vh;
+    border-radius: 8px;
+    background-repeat: repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.options-detail-tag {
+    width: 70px;
+    position: absolute;
+    right: 0px;
+    top: 5px;
+}
+
+.options-div {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 30vh;
+}
+
+.option {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    background-color: #03070455;
+    border: 2px solid white;
+}
+
+#autosave {
+    display: none;
+}
+
+#autosave:checked+.option {
+    background-color: var(--theme-color);
+}
+
+/* header end */
+
+main {
+    display: block;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.gradient-colors-block {
+    margin: 0 auto;
+    width: 100%;
+    border: 2px solid #03070473;
+    border-radius: 8px;
+}
+
+/* button row below gradient starts*/
+.gradient-buttons-row {
+    width: 100%;
+    overflow: auto hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #888888 #a5a5a586;
+    scroll-behavior: smooth;
+}
+
+/* gradient color buttons div*/
+.gradient-color-buttons {
+    min-width: max-content;
+    max-width: 100%;
+    height: 60px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.gradient-buttons-row::-webkit-scrollbar {
+    background-color: #03070473;
+    height: 5px;
+}
+
+.gradient-buttons-row::-webkit-scrollbar-thumb {
+    background-color: var(--theme-color);
+    background-image: radial-gradient(circle at center, #A122DDFF 00%, slateblue 100%);
+}
+
+/* gradient color buttons*/
+.color-buttons-gap {
+    width: 10px !important;
+}
+
+.colorButton {
+    user-select: none;
+    height: 48px;
+    color: transparent;
+    text-align: center;
+    min-width: 80px;
+    max-width: 100px;
+}
+
+#activeColor {
+    height: 54px;
+    min-width: 86px;
+    max-width: 106px;
+    border: solid 2px var(--theme-color);
+    padding: 2px;
+    background-clip: content-box;
+}
+
+.gradient-color-arrange {
+    border-top: 2px solid #03070473;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.arrange-button {
+    margin: 5px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    color: white;
+    background-color: var(--active-color);
+}
+
+.empty-space-div {
+    display: block;
+    height: 14px;
+}
+
+.color-pallete {
+    user-select: none;
+}
+
+.color-pallete summary {
+    background-image: var(--theme-gradient);
+    color: white;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.color-pallete[open] summary {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+
+.preset-color-pallete {
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    border: 1px solid #A4A4A5;
+    border-radius: 8px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    z-index: 1;
+}
+
+.preset-color {
+    margin: 10px 2%;
+    width: 20%;
+    height: 48px;
+}
+
+.preset-color:last-child {
+    background: var(--theme-gradient);
+    color: white;
+    font-size: 24px;
+}
+
+.app-settings {
+    width: 100%;
+    height: auto;
+}
+
+.color-div {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.color-settings-alpha,
+.color-settings-div {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #A4A4A5;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.color-settings-div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    background-color: var(--active-color);
+}
+
+.color-value-div,
+.linear-value-div {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.rgb-input,
+.hsla-input {
+    width: 54px !important;
+    height: 26px !important;
+}
+
+.hex-input {
+    text-transform: uppercase;
+    min-width: 48px;
+    max-width: 84px;
+    height: 26px;
+}
+
+.slider {
+    width: 70%;
+    -webkit-appearance: none;
+    height: 24px;
+    border: 1px solid #00000099;
+    border-radius: 16px;
+    cursor: move;
+}
+
+.alpha-slider-container {
+    width: 70%;
+    position: relative;
+}
+
+.alpha-slider-bg {
+    width: 100%;
+    height: 24px;
+    background-color: white;
+    border-radius: 16px;
+    background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), linear-gradient(-45deg, #ccc 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #ccc 75%), linear-gradient(-45deg, transparent 75%, #ccc 75%);
+    background-size: 16px 16px;
+    background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+
+.alpha-slider {
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+}
+
+input[type='number']:focus,
+.hex-input:focus {
+    border: solid 2px var(--theme-color);
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 34px;
+    height: 24px;
+    border-radius: 16px;
+    border: 1px solid #00000099;
+    background-color: white;
+}
+
+input[type='range']::-moz-range-thumb {
+    appearance: none;
+    width: 34px;
+    height: 24px;
+    border-radius: 16px;
+    border-color: #00000099;
+    background-color: white;
+}
+
+::selection {
+    color: white;
+    background-color: var(--theme-color);
+}
+
+.gradient-settings {
+    border: 1px solid #A4A4A5;
+    border-radius: 8px;
+    width: 100%;
+    height: 128px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.gradient-type-buttons,
+.linear-settings,
+.radial-shape-buttons {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.gradient-type-buttons {
+    border-right: 1px solid #03070473;
+}
+
+#activeType,
+#activeShape,
+#currentDirection,
+#currentDegree {
+    background-color: var(--theme-color);
+    color: white;
+}
+
+.gradient-type-buttons button,
+.radial-shape-buttons button {
+    height: 40px;
+    width: 90%;
+    font-size: 1em;
+}
+
+.linear-settings,
+.radial-settings {
+    height: 100%;
+    width: 80%;
+}
+
+.linear-settings div {
+    height: 45%;
+}
+
+.linear-value-div div {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linear-value-div label {
+    font-size: xx-large;
+}
+
+.linear-direction-div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 10%);
+    grid-template-rows: 38px;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.linear-direction-div button {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    min-width: 34px;
+}
+
+.radial-settings {
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row nowrap;
+    display: none;
+}
+
+.radial-shape-buttons {
+    width: 30%;
+}
+
+.radial-direction-div {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(36px, 40px));
+    grid-template-rows: repeat(3, 36px);
+    width: 40%;
+    height: 95%;
+    gap: 4px;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.radial-direction-div button {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.gradient-code {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.gradient-code-header {
+    user-select: none;
+    width: 100%;
+    height: 48px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    background: var(--theme-gradient);
+    color: white;
+    position: relative;
+}
+
+.gradient-code-header span {
+    padding-left: 10px;
+}
+
+.code-switch {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    font-size: small;
+    position: absolute;
+    right: 10px;
+    color: white;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.codeToggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .2s;
+    transition: .2s;
+    background-color: transparent;
+}
+
+.codeToggle:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 24px;
+    left: 4px;
+    bottom: 2px;
+    border-radius: 20px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+#codeSwitch:checked+.codeToggle:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+.code-switch label,
+.code-switch input {
+    cursor: pointer;
+}
+
+
+#gradientCode {
+    border: 1px solid #A4A4A5;
+    min-height: 80px;
+    padding: 10px 0px 16px 10px;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+
+#gradientCopyButton {
+    width: 100%;
+    border: 1px solid #A4A4A5;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+#gradientCopyButton i {
+    font-size: 20px;
+    margin: 0 8px 0 8px;
+}
+
+.user-saved-content {
+    width: 100%;
+    height: auto;
+}
+
+.user-colors,
+.user-gradients {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+    border: 1px solid #A4A4A5;
+}
+
+.user-color-header,
+.user-gradient-header {
+    width: 100%;
+    height: 40px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--theme-gradient);
+    color: white;
+}
+
+.user-color-header span,
+.user-gradient-header span {
+    padding-left: 10px;
+}
+
+.save-userdata-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: grid;
+    place-content: center;
+    font-size: 32px;
+    color: white;
+    background-color: transparent;
+    margin-right: 8px;
+}
+
+.user-colors-list,
+.user-gradients-list {
+    min-height: 100px;
+    max-height: 220px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden auto;
+    scrollbar-width: thin;
+    scrollbar-color: #888888 #a5a5a586;
+    scroll-behavior: smooth;
+}
+
+.empty-list {
+    font-size: x-large;
+    font-weight: 500;
+    color: var(--theme-color);
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-colors-list:hover,
+.user-gradients-list:hover,
+.gradient-buttons-row:hover {
+    scrollbar-color: var(--theme-color) #a5a5a586;
+}
+
+/* start */
+.user-color-container,
+.user-grad-container {
+    width: 80%;
+    height: max-content;
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.user-div-bg {
+    background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), linear-gradient(-45deg, #ccc 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #ccc 75%), linear-gradient(-45deg, transparent 75%, #ccc 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    position: relative;
+    z-index: 0;
+    width: 146px;
+    height: 48px;
+    border-radius: 8px;
+}
+
+.user-color,
+.user-grad {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+.user-color button,
+.user-grad button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 44px;
+    background-color: #55555555;
+    color: white;
+    display: grid;
+    place-content: center;
+}
+
+.user-color button:last-child,
+.user-grad button:last-child {
+    margin-left: 10px;
+}
+
+.user-color-info,
+.user-grad-copy {
+    min-width: 124px;
+    height: 48px;
+    border-radius: 8px;
+    font-size: medium;
+    background-color: transparent;
+}
+
+.user-grad-copy {
+    border: 1px solid #cccccc;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-grad-copy i {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.grad-copy {
+    width: 28px;
+    margin-right: 5px;
+}
+
+/* end */
+footer {
+    height: 24px;
+}
+
+@media screen and (min-width:768px) {
+    main {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+
+    .gradient-container {
+        top: -12vh;
+    }
+
+    .gradient {
+        height: 38vh;
+    }
+
+    .options-div {
+        height: 34vh;
+    }
+
+    .app-settings,
+    .user-saved-content {
+        display: inline-flex;
+        align-items: center;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    .color-div,
+    .gradient-settings {
+        width: 48%;
+        height: 180px;
+    }
+
+    .radial-settings {
+        height: 90%;
+    }
+
+    .radial-direction-div {
+        grid-template-columns: repeat(3, minmax(44px, 48px));
+        grid-template-rows: repeat(3, 44px);
+    }
+
+    .gradient-code-header {
+        justify-content: center;
+    }
+
+    .user-saved-content {
+        align-items: flex-start;
+    }
+
+    .user-colors,
+    .user-gradients {
+        width: 49%;
+    }
+
+    .user-gradients {
+        margin-left: 2%;
+    }
+}
+
+@media screen and (min-width:1012px) {
+    .preset-color {
+        width: 14.65%;
+        margin: 10px 1%;
+    }
+}
+
+/* hover focus */
+.title:hover,
+#gradientCopyButton:hover,
+#gradientCopyButton:focus {
+    background-image: linear-gradient(90deg, #A122DD, #CC397B, #FF374F, #A122DD);
+    background-size: 400% auto;
+    animation: animate 6s ease infinite;
+    color: white;
+}
+
+@keyframes animate {
+    to {
+        background-position: 400% 0%;
+    }
+}
+
+/* 
+.gradient-settings button:hover,
+.gradient-settings button:focus */
+
+.preset-color:hover,
+.preset-color:focus {
+    box-shadow: 2px 2px 5px #00000066;
+    -webkit-box-shadow: 2px 2px 5px #00000066;
+    -moz-box-shadow: 2px 2px 5px #00000066;
+}
+
+.summary:hover,
+.summary:focus {
+    padding-left: 8px;
+}
+
+.toast {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    white-space: nowrap;
+    width: 100%;
+    position: fixed;
+    top: 16%;
+    z-index: 99999;
+    display: none;
+    user-select: none;
+}
+
+.toast span {
+    background: var(--theme-gradient);
+    width: max-content;
+    height: max-content;
+    padding: 5px 10px;
+    color: white;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.go-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    border: 3px solid var(--theme-color);
+    border-radius: 50%;
+    background-color: white;
+    width: 44px;
+    height: 44px;
+    font-size: x-large;
+    display: grid;
+    place-content: center;
+    opacity: 0.8;
+    display: none;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.go-to-top:hover {
+    border: 3px solid var(--theme-color);
+    background-color: var(--theme-color);
+    opacity: 1;
+    color: white;
+    animation: topIt 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes topIt {
+    to {
+        padding-bottom: 10px;
+    }
+}
